@@ -1,0 +1,132 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.navbar {
+  font-weight: 100;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.navbar .navbar-brand h3 {
+  font-weight: 100;
+}
+
+.navbar .nav-item {
+  font-size: 1.4rem;
+}
+
+.navbar .nav-link:hover {
+  -webkit-transition: border 0.2s;
+  transition: border 0.2s;
+  border-bottom: 1px solid white;
+}
+
+#showcase {
+  background: url(../01obr.jpg) bottom center/cover no-repeat;
+  min-height: 750px;
+  position: relative;
+}
+
+#showcase #header {
+  z-index: 2;
+}
+
+#showcase #overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#showcase h1 {
+  font-family: "Questrial", sans-serif;
+  line-height: 1;
+}
+
+#showcase #book {
+  font-size: 1.5rem;
+  border-radius: 2rem;
+}
+
+#space {
+  height: 100px;
+  width: 100px;
+  position: relative;
+}
+
+.kostka21 {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background: blue;
+  position: relative;
+  border: black;
+  display: block;
+  -webkit-animation: mymove2 0.5s infinite ease;
+          animation: mymove2 0.5s infinite ease;
+  animation-direction: alternate-reverse;
+}
+
+.kostka22 {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background: blue;
+  position: relative;
+  border: black;
+  display: block;
+  -webkit-animation: mymove2 0.5s infinite ease;
+          animation: mymove2 0.5s infinite ease;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  animation-direction: alternate-reverse;
+}
+
+.kostka23 {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background: blue;
+  position: relative;
+  border: black;
+  display: block;
+  -webkit-animation: mymove2 0.5s infinite ease;
+          animation: mymove2 0.5s infinite ease;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+  animation-direction: alternate-reverse;
+}
+
+#jedna {
+  display: none;
+}
+
+#pet {
+  display: none;
+}
+
+@-webkit-keyframes mymove2 {
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+}
+
+@keyframes mymove2 {
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+}
+/*# sourceMappingURL=02_vlastni.css.map */

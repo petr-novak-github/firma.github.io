@@ -1,0 +1,42 @@
+Kdyby si někdo nepamatoval páteční postup
+
+
+1. Stahnout ze stránky getbootstrap.com zdrojové soubory (source files). Ne compiled.
+
+2. Rozbalit do složky s projektem a radši se vyhnout všem problémovým znakům v názvech adresářů.
+
+3. Vytvořit ve složce s projektem adresáře scss a css.
+
+4. Ve složce scss vytvořit soubory: custom_bootstrap.scss (naimportovaný original), custom.scss (vlastní), style.scss (zkombinuju a vytvořím výsledný)
+
+5. V custom_bootstrap.scss naimportuju originál z např. ../bootstrap_5_0_0/scss/bootstrap.scss a do něj napíšu
+// $theme-colors:(
+// "primary": #36b3a8
+// );
+@import "../bootstrap_5_0_0/scss/bootstrap.scss";
+
+6. V style.scss naimportuju originál a můj přepisující
+@import "custom.scss";
+@import "custom_bootstrap.scss";
+
+7. do vlastního přepisujícího píšu co chci, např.
+body {
+font-family: "Raleway", sans-serif;
+}
+
+6. Nainstalovat Live Sass Compiler a nastavit cestu, kde se ukládají zkompilované soubory
+v nastavení vyhledat: liveSassCompile.settings.formats
+"liveSassCompile.settings.formats": [
+
+
+{
+"format": "expanded",
+"extensionName": ".css",
+"savePath": "/css/"
+}
+]
+
+7. Spustit Live Sass Compiler na souboru style.scss
+8. Color Highlight Extension se bije s Live Sass Compilerem
+9. Na konec stránky přidat script bootstrapu
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
